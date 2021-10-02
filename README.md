@@ -11,4 +11,4 @@
 
 ### According to the regulations, the draw cannot match two teams that have met in the same bracket in the group stage or two teams from the same championship or league (if this second is not possible, please match randomly).
 
-## Challenge Created by Francisco Guzmán Herrera
+## Challenge Created by [Francisco Guzmán Herrera](https://github.com/I7RANK).
