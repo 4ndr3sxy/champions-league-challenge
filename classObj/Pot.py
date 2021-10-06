@@ -27,3 +27,6 @@ class Pot:
 
     name = property(get_name, set_name)
     teams = property(get_teams, set_teams)
+
+    def create_pots(cup):
+        """Code here"""
