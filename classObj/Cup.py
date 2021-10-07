@@ -1,9 +1,6 @@
 """Class/ object Cup"""
 
 
-from _typeshed import Self
-
-
 class Cup:
     """Constructor"""
     def __init__(self, name="", count_teams=0):
