@@ -1,6 +1,18 @@
 from classObj.Cup import Cup
 from classObj.Pot import Pot
 from classObj.Team import Team
+from classObj.Data_burn import Data
+
+
+print("----------------------")
+print("TEST NO objects concat")
+print("----------------------")
+
+
+list_teams = []
+
+obj_data = Data
+obj_data.create_list_object_team()
 
 """Test Cup Eufa"""
 print("Test Cup object 1")
