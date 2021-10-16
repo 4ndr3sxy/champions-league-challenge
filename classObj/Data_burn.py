@@ -3,7 +3,9 @@ from classObj.Cup import Cup
 import random
 
 class Data:
+    list_object_teams = []
     teams_list = [
+    ["Atalanta","Italian Serie A"],
     ["Aston Villa","English Premier League"],
     ["Ajax","Dutch First Division"],
     ["Alkmaar", "Dutch First Division"],
@@ -92,7 +94,7 @@ class Data:
         list_teams = []
         list_league = []
         for team, league in cls.teams_list:
-            new_league = Cup(league, 10)
+            new_league = Cup(league)
             if new_league not in list_league:
                 list_league.append(new_league)
             for league2 in list_league:
@@ -101,6 +103,9 @@ class Data:
                     new_team = Team(team, league2, rnd)
                     list_teams.append(new_team)
                     print("New team:")
-                    print("\t{} - {} - {} - {}".format(new_team.name, new_team.league.name, new_team.iq, new_team.league.count_teams))
+                    print("\t{} - {} - {}".format(new_team.name, new_team.league.name, new_team.iq))
                     break
+
+        for league in list_league:
+            print(league)
         print("-----------------------\n")
