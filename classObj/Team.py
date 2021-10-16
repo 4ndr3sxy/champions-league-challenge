@@ -63,3 +63,10 @@ class Team:
     win = property(get_win, set_result_match)
     lose = property(get_lose, set_result_match)
     tie = property(get_tie, set_result_match)
+
+    def __str__(self):
+        information = ""
+        information += self.name + " - "
+        information += self.league.name + " - "
+        information += str(self.iq)
+        return information
