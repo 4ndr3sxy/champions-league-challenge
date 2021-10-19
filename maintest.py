@@ -112,3 +112,15 @@ for cup in cups:
         print("\nTeams Objects")
         print(cup.teams)
     print("----")
+
+"""TEST Copy dict"""
+teamsCup1 = cups[1].get_teams()
+new_teams = teamsCup1[0]
+values = [0, 1, 2]
+new_dict = {new_teams: values}
+new_dict[new_teams][0] = 122
+other_team = teamsCup1[1]
+values2 = [8, 6, 4]
+new_dict[other_team] = values2
+print(new_dict)
+print(new_teams)
