@@ -1,8 +1,11 @@
 
 class Group:
-    def __init__(self, name="", list_teams={}):
-        self.__name = name
-        self.__list_teams = list_teams
+    count_instances = 0
+
+    def __init__(self):
+        Group.count_instances += 1
+        self.__name = Group.count_instances
+        self.__teams = []
 
     def get_name(self):
         return self.__name
@@ -10,11 +13,11 @@ class Group:
     def set_name(self, value):
         self.__name = value
 
-    def get_list_teams(self):
-        return self.__list_teams
+    def get_teams(self):
+        return self.__teams
 
-    def set_list_teams(self, key, value):
-        self.__list_teams[key] = value
+    def set_teams(self, obj):
+        self.__teams.append(obj)
 
     name = property(get_name, set_name)
-    list_teams = property(get_list_teams, set_list_teams)
+    teams = property(get_teams, set_teams)
