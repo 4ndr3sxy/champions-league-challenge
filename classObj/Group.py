@@ -53,3 +53,6 @@ class Group:
     def results(self):
         for teams in self.teams:
             print("\t{} - V={} | L={}".format(teams.name, teams.win, teams.lose))
+
+    def clean(self):
+        self.__teams = []
