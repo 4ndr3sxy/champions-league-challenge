@@ -81,3 +81,14 @@ if __name__ == "__main__":
             print(teams)
         print("---- END Group ----\n")
     """Create groups in UEFA champions league (SUCCESS)"""
+
+    """Init games in team of the each group"""
+    print("--- Empiezan los encuentros ---")
+    for obj in groups:
+        print("---- Group {} ----".format(obj.name))
+        obj.play_games()
+        print("\t---- Results Group {} ----".format(obj.name))
+        obj.results()
+        print("\t---- END results ----\n".format(obj.name))
+        print("---- END Group ----\n")
+    
