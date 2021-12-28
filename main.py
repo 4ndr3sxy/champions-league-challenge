@@ -91,4 +91,19 @@ if __name__ == "__main__":
         obj.results()
         print("\t---- END results ----\n".format(obj.name))
         print("---- END Group ----\n")
+    """Init games in team of the each group (SUCCESS)"""
     
+    """Order teams in each group by wins"""
+    print("\n---- TEAMS in each group (ORDERED by wins)----\n")
+    for group in groups:
+        sorted_teams_group = group.teams
+        sorted_teams_group = sorted(sorted_teams_group, key=lambda x: x.win)[::-1]
+        group.clean()
+        for team in sorted_teams_group:
+            group.teams = team
+        print("---- Group {} ----".format(group.name))
+        for teams in group.teams:
+            print("{} -> V={}, L={}".format(teams.name, teams.win, teams.lose))
+        print("---- END Group ----\n")
+    print("--- END ---\n")
+    """Order teams in each group by wins (SUCCESS)"""
