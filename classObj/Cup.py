@@ -69,3 +69,16 @@ class Cup:
     def clean_teams(self):
         self.__teams = []
         self.__count_teams = 0
+
+    def shuffle(self, pot_1, pot_2):
+        pass
+        """
+        Logic to select random vs between teams head and NO head
+        1)random to get position in index 
+        2) validate if the team in this position is another league
+        3)YES: save
+        4)NO: again step 1
+        5)Return: array bidimentional, example: [[0,5], [1,3], [8, 6]]
+            [0, 5]-> first position(0) is position of team in POT head
+            [0, 5]-> second position(5) is position of team in POT no head
+        """
