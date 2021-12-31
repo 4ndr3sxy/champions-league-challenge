@@ -10,6 +10,7 @@ class Team:
         self.__win = 0
         self.__lose = 0
         self.__tie = 0
+        self.__points = 0
 
     """Get name"""
     def get_name(self):
@@ -18,6 +19,14 @@ class Team:
     """Set name"""
     def set_name(self, value):
         self.__name = value
+
+    """Get points"""
+    def get_points(self):
+        return self.__points
+
+    """Set points"""
+    def set_points(self, value):
+        self.__points = value
 
     """Get league of the team"""
     def get_league(self):
@@ -50,6 +59,7 @@ class Team:
     def set_result_match(self, val):
         if val == 1:
             self.__win += 1
+            self.__points += 3
         elif val == 0:
             self.__tie += 1
         elif val == -1:
@@ -63,6 +73,7 @@ class Team:
     win = property(get_win, set_result_match)
     lose = property(get_lose, set_result_match)
     tie = property(get_tie, set_result_match)
+    points = property(get_points, set_points)
 
     def __str__(self):
         information = ""
