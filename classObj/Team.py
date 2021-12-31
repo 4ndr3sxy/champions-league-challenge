@@ -62,6 +62,7 @@ class Team:
             self.__points += 3
         elif val == 0:
             self.__tie += 1
+            self.__points += 1
         elif val == -1:
             self.__lose += 1
         else:
