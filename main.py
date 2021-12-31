@@ -84,13 +84,18 @@ if __name__ == "__main__":
 
     """Init games in team of the each group"""
     print("--- Empiezan los encuentros ---")
-    for obj in groups:
-        print("---- Group {} ----".format(obj.name))
-        obj.play_games()
-        print("\t---- Results Group {} ----".format(obj.name))
-        obj.results()
-        print("\t---- END results ----\n".format(obj.name))
-        print("---- END Group ----\n")
+    for i in range(0,2):
+        if i == 0:
+            print("--- Ida ---")
+        else:
+            print("--- Vuelta ---")
+        for obj in groups:
+            print("---- Group {} ----".format(obj.name))
+            obj.play_games()
+            print("\t---- Results Group {} ----".format(obj.name))
+            obj.results()
+            print("\t---- END results ----\n".format(obj.name))
+            print("---- END Group ----\n")
     """Init games in team of the each group (SUCCESS)"""
     
     """Order teams in each group by wins"""
@@ -103,7 +108,26 @@ if __name__ == "__main__":
             group.teams = team
         print("---- Group {} ----".format(group.name))
         for teams in group.teams:
-            print("{} -> V={}, L={}".format(teams.name, teams.win, teams.lose))
+            print("{} -> P={} V={}, L={}".format(teams.name, teams.points, teams.win, teams.lose))
         print("---- END Group ----\n")
     print("--- END ---\n")
     """Order teams in each group by wins (SUCCESS)"""
+
+    """"OCTAVOS"""
+    print("--- Octavos ---")
+    heads = Pot()
+    n_heads = Pot()
+    for group in groups:
+        heads.teams = group.teams[0]
+        n_heads.teams = group.teams[1]
+        # print(group.teams[0])
+        # for team in group.teams:
+    # print(heads.teams)
+    # print(n_heads)
+    print("--- Teams heads ---")
+    # print(heads.teams[1])
+    for team in heads.teams:
+        print(team)
+    print("\n--- Teams NO heads ---")
+    for team in n_heads.teams:
+        print(team)
