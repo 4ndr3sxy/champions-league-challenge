@@ -27,14 +27,15 @@ class Group:
         for i in range(len(self.teams) - 1):
             for j in range(i, len(self.teams) - 1):
                 # print(type(self.teams[i]))
-                print("{} VS {}:".format(self.teams[i].name, self.teams[j + 1].name))
                 self.logic_play_game(self.teams[i], self.teams[j + 1])
+                    
 
 
             # print("empiezan los juegos {}".format(i))
 
     def logic_play_game(self, team1, team2):
         # print("{} VS {}".format(team1.name, team2.name))
+        print("{} VS {}:".format(team1.name, team2.name))
         total_iq = team1.iq + team2.iq
         print("\tiq={} VS iq={} -> total iq={}".format(team1.iq, team2.iq, total_iq))
         rnd = random.randint(0, total_iq)
